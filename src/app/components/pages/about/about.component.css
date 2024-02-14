@@ -1,0 +1,33 @@
+*{
+    font-family: cursive;
+}
+
+.about  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 2em;
+    background-color: azure;
+    max-width: 80vw; /* Use 'max-width' para garantir que não ultrapasse 80% da largura da viewport */
+    height: auto; /* Deixe a altura ajustar automaticamente ao conteúdo */
+    filter:drop-shadow(1px 3px 10px black);
+    margin-top: 9vh;
+    font-family: cursive;
+}
+
+h2, p {
+    margin-bottom: 1em;
+}
+
+.about  a {
+    text-decoration: underline;
+}
+
+#only:hover{
+    background-color: rgb(32, 30, 30);
+    padding: 4px;
+    border-radius: 5px;
+    filter:drop-shadow(1px 3px 5px black);
+}

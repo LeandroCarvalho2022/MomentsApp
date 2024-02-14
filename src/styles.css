@@ -1,1 +1,140 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+    color: #090909;
+}
+/*https://img.freepik.com/fotos-gratis/textura-da-parede-velha-do-cimento_1149-1280.jpg?w=1060&t=st=1701137726~exp=1701138326~*/
+body{
+    background-image: url('https://img.freepik.com/fotos-gratis/textura-da-parede-velha-do-cimento_1149-1280.jpg?w=1060&t=st=1701137726~exp=1701138326~hmac=35c08c0304bebdee87b505f38e66697e68f01b774a1c344cbc46b8cc3b9f5e03');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a {
+    text-decoration: none;
+    color: #232020;
+    transition: .6s;
+}
+
+a:hover{
+    color: #f7fafb;
+}
+
+form{
+    width: 450px;
+    margin: 0 auto;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-group label{
+    font-weight: bold;
+    font-size: .9em;
+    margin-bottom: .4em;
+}
+
+.form-group input,
+.form-group textarea{
+    padding: .6em;
+    color: #777;
+    font-size: 0.8em;
+}
+
+input[type='submit']{
+    background-color: #efefef;
+    padding: 0.6em 1em;
+    border: 2px solid transparent;
+    font-weight: bold;
+    font-size: 1.1;
+    transition: .4s;
+    cursor: pointer;
+}
+input[type='submit']:hover {
+    color: #ffffff;
+    border-color: #000000;
+    background-color: transparent;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.validation-error p{
+    color: #dc3545;
+    margin-top: .4em;
+    border-left: #dc3545 3px solid;
+    padding-left: .2em;
+
+}
+
+/* Botões globais*/
+
+.edit-btn,
+.remove-btn{
+    border: 1px solid #efefef;
+    padding: 0.4em 1em;
+    font-size: 1em;
+    margin: 0 0.5em;
+    cursor: pointer;
+    background-color: #fff;
+    transition: 0.4s;
+}
+
+.remove-btn,
+.remove-btn path{
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.remove-btn:hover,
+.remove-btn:hover path {
+    color: #fff;
+    background-color: #dc3545;
+}
+
+
+button fa-icon,
+a fa-icon {
+    margin-right: 0.2em;
+}
+
+.edit-btn,
+.edit-btn  path{
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.edit-btn:hover,
+.edit-btn:hover path {
+    color: #fff;
+    background-color: #007bff;
+}
+
+
+
+
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #403941 #d3cfcf;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #d3cfcf;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #403941;
+    border-radius: 10px;
+    border: 1px groove #121212;
+  }
+

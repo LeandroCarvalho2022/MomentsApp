@@ -1,0 +1,33 @@
+<form (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
+    <input type="hidden" formControlName="id"> 
+    <!-- Será preenchido somente quando for editar, por isso está vazio,
+    utilizado formcontrolname para linkar com componente de inicializacao de formulário  -->
+    <div class="form-group">
+            <label for="title">Título:</label>
+            <input 
+            type="text" 
+            placeholder="Coloque um Título" 
+            required 
+            formControlName="title" 
+            />
+        <div *ngIf="title.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="title.errors?.['required']">O título é <span>Obrigatório!</span></p>
+        </div>  
+    </div>  
+        <div class="form-group">
+            <label for="description">Descrição:</label>
+            <input 
+            type="text" 
+            placeholder="Do que se trata?" 
+            formControlName="description"
+            required />
+        </div>
+        <div *ngIf="description.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="description.errors?.['required']">A Descrição é <span>obrigatória!</span></p>
+        </div>  
+        <div class="form-group">
+            <label for="image" id="123" >Coloque uma representação do projeto:</label>
+            <input type="file" (change)="onFileSelected($event)">
+        </div>
+        <input type="submit" value="{{ btnText }}" />
+    </form>

@@ -1,0 +1,27 @@
+<div class="home-container">
+    <h1>PostPage</h1>
+    <!--form de busca-->
+    <div class="search-container">
+        <form>
+            <fa-icon [icon]="faSearch"></fa-icon>
+            <input type="text" placeholder="Busque algum post..."
+            (input)="search($event)" />
+        </form>
+    </div>
+    <div *ngIf="moments.length > 0; else noMoments">
+        <div class="moments-container">
+            <div class="moment" *ngFor="let moment of moments">
+                    <img
+                        src="{{baseApiUrl}}uploads/{{moment.image}}" 
+                        alt="{{moment.title}}"
+                    />
+                <h3>{{moment.title}}</h3>
+                <p class="date">Em: {{moment.created_at}}</p>
+                <p><a routerLink="moment/{{moment.id}}">Detalhes</a></p>
+            </div> 
+        </div>
+    </div>
+    <ng-template #noMoments>
+        <h1>Nao foi encontrado nada.</h1>
+    </ng-template>
+</div>
